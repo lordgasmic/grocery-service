@@ -49,7 +49,7 @@ public class GroceryService {
             if (list == null) {
                 list = new ArrayList<>();
             }
-            list.add(new Item(response.getItem(), response.getQuantity()));
+            list.add(new Item(response.getQuantity(), response.getItem()));
             groupedGroceries.put(response.getDepartment(), list);
         }
 

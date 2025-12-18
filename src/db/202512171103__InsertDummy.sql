@@ -25,3 +25,5 @@ values ('dairy', '1', 'american cheese'),
        ('deli', '1/2', 'turkey'),
        ('deli', '1/2', 'swiss'),
        ('deli', '1', 'ham');
+update grocery_list
+set department = UPPER(department);
