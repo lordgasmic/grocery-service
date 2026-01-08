@@ -33,4 +33,6 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Docker Push
-        run: docker push ${{ steps.set-env-vars.outputs.DATE }}
+        env:
+          TAG: ${{ steps.set-env-vars.outputs.DATE }}
+        run: docker push $TAG
